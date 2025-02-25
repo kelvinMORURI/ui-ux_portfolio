@@ -318,14 +318,16 @@ a:hover {
         transform: none;
         position: relative;
         left: unset;
-        width: 85vw;
+        width: 100%;
         height: auto;
-        margin-top: 30px;
+        margin: 30px 0 20px;
+        object-fit: contain;
       }
 
-      .hero-section {
-        height: auto;
+      .hero-section .portfolioImage {
+        height: unset;
       }
+      
 
       .project-item {
         margin-bottom: 20px;
@@ -333,6 +335,10 @@ a:hover {
       .floatingSocialMedia {
         left: 6.5vw;
       }
+      .max-width-mobile{
+        max-width: unset;
+      }
+
 
     
     
@@ -342,7 +348,6 @@ a:hover {
   .hero-section > div {
     background: url("../images/pic.png") no-repeat bottom right;
     background-size: 45%;
-    height: 100%;
   }
   /* .hero-section .portfolioImage {
     display: none !important;
