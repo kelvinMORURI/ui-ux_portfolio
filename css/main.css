@@ -320,11 +320,15 @@ a:hover {
         left: unset;
         width: 100%;
         height: auto;
-        margin: 30px 0 20px;
+        margin: 30px 0 50px;
         object-fit: contain;
       }
 
       .hero-section .portfolioImage {
+        height: unset;
+      }
+
+      .hero-section {
         height: unset;
       }
       
