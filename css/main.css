@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 4rem;
+  font-size: 16px;
+}
+body {
+  font: "Poppins", sans-serif;
+}
+/* Typography -----------------------------------------------------------------*/
+h1,
+.h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h2,
+.h2 {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+h3,
+.h3 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+h4,
+.h4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+h5,
+.h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h6,
+.h6 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+a {
+  color: #edb000;
+  text-decoration: none;
+}
+a:hover {
+  color: #b78802;
+  text-decoration: none;
+}
+/* Colors */
+.primary_color {
+  color: #edb000;
+}
+.bg_primary {
+  background-color: #edb000;
+}
+.bg_dark {
+  background-color: #000;
+}
+.text_grey {
+  color: #666;
+}
+/* Buttons*/
+.primarybtn {
+  border: 1px solid #edb000;
+  color: #edb000;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  margin: 15px 0;
+  transition: all 0.5s ease-in-out;
+}
+.primarybtn:hover {
+  background-color: #edb000;
+  color: #000;
+}
+/* Header */
+.navbar {
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.navbar .logo {
+  color: #fff;
+  font-family: "Marko One", serif;
+}
+.navbar ul li {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+}
+.navbar ul li a {
+  color: #fff;
+}
+.navbar ul li a:after {
+  content: "";
+  background-color: #fff;
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 0;
+}
+.navbar ul li:hover a:after,
+.navbar ul li.active a:after {
+  transition: width 0.2s ease-in-out;
+  width: 100%;
+}
+.navbar-toggler > span {
+  color: #fff;
+  padding: 8px;
+}
+/* Floating Social Icons*/
+.floatingSocialMedia {
+  position: fixed;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  margin: 5px 5px;
+}
+.floatingSocialMedia a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-decoration: none;
+  background-color: #999;
+  color: #fff;
+  transition: all 0.35s linear;
+  transform: scale(1);
+}
+.floatingSocialMedia li:first-child a {
+  background-color: #0a66c2;
+}
+.floatingSocialMedia li:nth-child(2) a {
+  background-color: #053eff;
+}
+.floatingSocialMedia li:last-child a {
+  background-color: #ea4c89;
+}
+.floatingSocialMedia li:hover a {
+  transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("../images/common-bg.svg") no-repeat;
+  height: clamp(92vh, 92vh, 92vh);
+}
+.hero-section h1 .name {
+  background-image: linear-gradient(170deg, #edb000, #edb000, #666, #000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25em;
+  font-weight: 800;
+}
+.hero-section .portfolioImage {
+  height: clamp(250px, 85vh, 85vh);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile_pic {
+  bottom: 0;
+  left: 80%; /* Center horizontally */
+  transform: translateX(-50%); /* Ensure exact centering */
+  filter: drop-shadow(0 0 0.5rem #edb000) brightness(1.2);
+  position: absolute;
+  width: clamp(200px, 50vw, 85vh);
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1;
+  margin-bottom: 100px;
+}
+
+.scrollArrow {
+  bottom: 40px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 2.3s infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+    bottom: 15px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.scrollArrow i {
+  height: 100%;
+}
+/* Common CSS */
+.textOverlay {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.03);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 25px;
+  z-index: -1;
+}
+.textOverlay + h3 {
+  margin: 0 auto;
+  width: fit-content;
+}
+.textOverlay + h3:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #edb000;
+  left: 0;
+  bottom: 0;
+}
+.skills span {
+  background: #eeb00042;
+  padding: 7px 13px;
+  margin: 6px;
+  display: inline-block;
+  border: 1px solid #eeb00042;
+  border-radius: 2px;
+}
+.projects-section {
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("../images/common-bg.svg") no-repeat;
+}
+.project {
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 10px 20px 19px #ffffff, -10px -10px 19px #dedede;
+  position: relative;
+  margin: 0 70px;
+}
+.project img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+.project:hover img {
+  transform: scale(1.3);
+}
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+.project:hover .projectOverlay {
+  background-color: rgba(237, 176, 0, 0.9);
+}
+.projectOverlay .primarybtn {
+  background: #fff;
+}
+.socialMedia li:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #edb000;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+@media (min-width: 576px) {
+  .getInTouch {
+    text-align: right;
+  }
+}
+
+@media(max-width:768px) {
+    .profile_pic {
+        transform: none;
+        position: relative;
+        left: unset;
+        width: 85vw;
+        height: auto;
+        margin-top: 30px;
+      }
+
+      .hero-section {
+        height: auto;
+      }
+
+      .project-item {
+        margin-bottom: 20px;
+      }
+      .floatingSocialMedia {
+        left: 6.5vw;
+      }
+
+    
+    
+}
+@media (max-width: 575px) {
+
+  .hero-section > div {
+    background: url("../images/pic.png") no-repeat bottom right;
+    background-size: 45%;
+    height: 100%;
+  }
+  /* .hero-section .portfolioImage {
+    display: none !important;
+  } */
+  .floatingSocialMedia {
+    left: auto;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+  .floatingSocialMedia {
+    left: auto;
+    right: 0;
+    opacity: 0;
+    animation: showIcon 4s 1 ease-in-out;
+  }
+  @keyframes showIcon {
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+  }
+}
